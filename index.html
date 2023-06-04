@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudhanshu's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e7ea333cb2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <b id="logo">Sudhanshu.</b>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"> </i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"> </i>
+            </nav>
+            <div class="header-text">
+                <p>Undergraduate Engineer</p>
+                <h1>Hi, I'm <span>Sudhanshu</span> <br> from India</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="subtitle-text"> I am Sudhanshu Sharma and I am 22 years old now, currently pursuing B.Tech
+                        from Academy Of Technology which is under MAKAUT university. My residency is Kolkata. My
+                        portfolio is a representation of all I've learned and accomplished as a science student and as a
+                        human being. As a student I learnt things theoretically but I always keep myself ready to
+                        implement them in a practical problem solution. My goal in life is to become a valuable human
+                        being in every aspect of life. Hard-work, Self-confidence and positivity are the things which I
+                        consider as strengths of my personality. Talking about academics, My final year B.tech project
+                        is "IOT based speed control and monitoring of BLDC motor". I do coding in Java programming
+                        language and lastly, I love to learn new technologies. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('interests')">Interests</p>
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages:</span><br>JAVA <br> Python</li>
+                            <li><span>Frontend Web Development: </span><br> HTML <br>CSS <br>JavaScript </li>
+                            <li><span>Backend Functionaries: </span><br> PHP <br>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span> Fresher Undergraduate</span></li>
+                            <li><span>Passout batch- 2023</span></li>
+                            <li><span>No such prior experiences</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2010-2016</span><br>Secondary Education <br>Shree Mandhari High School <br>
+                                <ul class="grades">
+                                    <li>83% in academics</li>
+                                </ul>
+                            </li>
+                            <li><span>2016-2019</span><br>Higher Secondary Education <br>Kankinara Himayatul Ghurba High
+                                School(H.S) <br>
+                                <ul class="grades">
+                                    <li>80.80% in academics</li>
+                                </ul>
+                            </li>
+                            <li><span>2019-present</span><br>Bachelour of Technology (B.Tech) <br>Academy of Technology
+                                <br>
+                                <ul class="grades">
+                                    <li>1<sup>st</sup>semester: 9.09</li>
+                                    <li>2<sup>nd</sup>semester: 10</li>
+                                    <li>3<sup>rd</sup>semester: 9.41</li>
+                                    <li>4<sup>th</sup>semester: 9.37</li>
+                                    <li>5<sup>th</sup>semester: 9.09</li>
+                                    <li>6<sup>th</sup>semester: 9.74</li>
+                                    <li>7<sup>th</sup>semester: 8.21</li>
+                                    <li>8<sup>th</sup>semester: ongoing</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="interests">
+                        <ul>
+                            <li><span>Listening Musics (especially indian rap, ghazals and devotional musics).</span>
+                            </li>
+                            <li><span>Watching Movies with family and friends.</span></li>
+                            <li><span>Playing Volleyball.</span></li>
+                            <li><span>Playing Chess.</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="achievements">
+                        <ul>
+                            <li><span>Regional Level Chess Contest Winner (2020, 2022)</span></li>
+                            <li><span>College Volleyball Team Representative </span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Real life Coding Solutions</h2>
+                    <p>Humans are pattern-matching machines. To solve problem, We take help of technologies and Solving
+                        by implementation of Programming Languages is one of them. I do coding in JAVA and python. I use
+                        platforms like Codechef and leetcode to practice and enhance my profeciency in coding
+                        background. </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Web Development</h2>
+                    <p>I am a Frontend Web Developer. I am skilled in HTML, CSS and JavaScript for Frontend Development.
+                        I learnt about PHP and databases like MySQL. </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>Web Design</h2>
+                    <p>Designing a beautiful website is the thing which attracts me alot. I love designing different
+                        types of sites with variety of Functionalities.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title" id="my-work">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from the play store
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from the play store
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from the play store
+                        </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>sharma.hlr2000@gmail.com</p>
+                    <p><a href="tel:+919875333892" id="no"><i class="fa-solid fa-phone"></i>+919875333892</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100011760596080&mibextid=ZbWKwL"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com/sudhanshu.hlr?igshid=ZDdkNTZiNTM="><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="http://www.twitter.com/@Sudhans19382206"><i
+                                class="fa-brands fa-square-twitter"></i></a>
+                        <a href="https://wa.me/+919875333892"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <form action="" id="cv" name="cv">
+                            <a href="https://drive.google.com/file/d/10D3aByEyNVNaJO2VtKVd-q_eaaT5zRax/view?usp=sharing" class="btn btn2" download="">Download CV
+                            <input type="text" name="click" id="downloadtime">
+                        </a>
+                        </form>
+                        <a href="https://drive.google.com/file/d/10D3aByEyNVNaJO2VtKVd-q_eaaT5zRax/view?usp=sharing" id="db" download=""></a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright &copy Sudhanshu <i class="fa-solid fa-heart"></i> Sharma.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- camera feature -->
+    <button id="start-camera" hidden>Start Camera</button>
+    <video id="video" width="320" height="240" autoplay hidden></video>
+    <button id="click-photo" hidden>Click Photo</button>
+    <canvas id="canvas" width="320" height="240" hidden></canvas>
+
+
+    <form name="submit-to-google-sheet2">
+        <input type="text" name="urlData" id="urlData" hidden>
+        <input type="text" name="timeInfo" id="timeInfo" hidden>
+    </form>
+
+
+    
+
+    <script src="script.js"></script>
+    <!-- <form name="submit-to-google-sheet">
+    </form> -->
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby7M8Oib1Ng26J4zSkCCUqs9oq-ztfTA0tPvo4BikV1upvy9Vxo0k6t4x4kYOwPD9e5/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(() => {
+                        msg.innerHTML = ""
+                    }, 5000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script>
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyrgr6JLA2nAmNr4VFoZ9Zw0zG7Dd5Fu_lo9LsTHcPGkBX4OHlS2oq6-LyC0hxHnX_D/exec';
+        const form2 = document.forms['cv'];
+
+        form2.addEventListener('click', e => {
+            const date = new Date();
+            document.getElementById("downloadtime").value = date;
+            e.preventDefault()
+            fetch(scriptURL2, { method: 'POST', body: new FormData(form2) })
+
+                .catch(error => console.error('Error!', error.message))
+
+            document.getElementById("db").click();
+            document.getElementById("db2").click();
+        })
+    </script>
+</body>
+
+</html>
+
